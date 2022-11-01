@@ -14,7 +14,7 @@ if (isset($_POST["costValue"])) {
 if (!empty($model) and !empty($description) and !empty($costValue)) {
     include "config.php";
 
-    $query = "INSERT INTO cars (model, description, currentOwnerName, costValue) VALUES ('$model', '$description', '0', '$costValue')";
+    $query = "INSERT INTO cars (model, description, currentOwnerName, costValue) VALUES ('$model', '$description', 'None', '$costValue')";
     $result = mysqli_query($connection, $query) or die('Query failed: ' . mysqli_error($connection));
     mysqli_close($connection);
 ?>
